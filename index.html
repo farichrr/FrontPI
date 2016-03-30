@@ -9,6 +9,19 @@
     <!-- CSS  -->
     <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
     <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" >
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script>
+        function initialize() {
+            var mapProp = {
+                center:new google.maps.LatLng(51.508742,-0.120850),
+                zoom:5,
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 </head>
 <body id="top" class="scrollspy">
 
@@ -188,6 +201,14 @@
         <img src="http://4.bp.blogspot.com/-93EnQYildeA/VPlbKf2sYQI/AAAAAAAAC5M/jK7B2QUkQWg/s1600/pasar2.jpg">
 
 
+    </div>
+</div>
+<!--Work-->
+<div class="section scrollspy">
+    <div class="container">
+        <div class="row">
+            <div class="map-responsive" id="googleMap"></div>
+        </div>
     </div>
 </div>
 
